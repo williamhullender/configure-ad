@@ -185,44 +185,59 @@ Next, type in ipconfig /all to ensure the DNS server is dc-1.
 
 Here we can see the ping succeeded, and the DNS server is the private IP address for dc-1.
 
+Next, we are going to install Active Directory Domain Services.
 
+Click start and then go to server manager.
 
+![image](https://github.com/user-attachments/assets/8acaa679-a2b0-4fc4-b1bf-e5a325584896)
 
+Then click, Add Roles and features
 
+![image](https://github.com/user-attachments/assets/46eb03fe-1c9b-43a5-8d5d-f1fa4b3fcb8e)
 
+Then click Next -> Next until you get to server selection. Verify there is only one entry and it should say dc-1.
 
+![image](https://github.com/user-attachments/assets/5419b74c-1988-484d-ab38-112cad668b31)
 
+Then click next to get to Server Roles and check the box beside Active Directory Domain Service.
 
+![image](https://github.com/user-attachments/assets/e9599b6a-45aa-4cca-a844-416b01a2c986)
 
+Next, click Add Features.
 
+![image](https://github.com/user-attachments/assets/27e80987-ab45-4f8d-814a-407477b9a55c)
 
+Then click next (x3). Then click the box next to "Restart the following roles, role services, or features on selected server, click Install." Then click yes on the Add Roles and Features Wizard. Afterwards, click Install.
 
+![image](https://github.com/user-attachments/assets/15487689-95cc-451d-bd0e-771be569727e)
 
+This will start Installing the Active Directory services. When it is done click close.
 
+Next, we must configure dc-1 to become a Domain Controller and create a new forest.
 
+In Server Manager, go to the top right corner and click the flag icon. Next, click Promote this server to a domain controller.
 
+![image](https://github.com/user-attachments/assets/1415a577-09b3-42dc-9fb3-d27cd3a4c9c8)
 
+Next, click Add a new forest. Then input the name "mydomain.com". Afterward, click next.
 
+![image](https://github.com/user-attachments/assets/a12d09a1-29b6-4b69-97cf-3145a08a010a)
 
+Then for the password, input "Password1", Ensure to write this down or remember it. Then click next.
 
+![image](https://github.com/user-attachments/assets/e8cb801e-f34f-456f-ac16-bbbeaeedb17a)
 
+Then ensure that DNS delegation is unchecked.
 
+![image](https://github.com/user-attachments/assets/37c1bc68-db33-4869-af1f-230af59371e5)
 
+Then click next (x4), until you get to Prerequisite check, then click Install.
 
+![image](https://github.com/user-attachments/assets/71f73684-7514-43e1-9456-c76e3a603443)
 
+After this, dc-1 should automatically restart.
 
-
-
-
-
-
-
-
-
-
-
-
-
+Next were going to log back on dc-1, however, the normal logi9n username will not work. You will need to use the new username "mydomain.com\labuser". Ensure you use a backslash or it will not work. The password stays the same. The reason for the username being different is because dc-1 is acting as a domain controller now, to log into it, we must specify which domain we want to log into, and then specify which user is logging in.
 
 
 
