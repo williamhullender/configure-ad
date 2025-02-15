@@ -327,22 +327,27 @@ Then click OK. It will say Welcome to the mydomain.com domain. Click OK (x2).
 
 Then in the Systems Properties click Close, then click Restart Now. This will restart client-1.
 
+Next in dc-1, we can check to ensure client-1now shows up in Active Directory Users and Computers.
 
+In dc-1 go to Active Directory Users and Computers. Then click the mydomain.com dropdown, then click Computers. You can see client-1 now shows up. If you double click client-1 you can see all the information about that computer.
 
+![image](https://github.com/user-attachments/assets/c0d0bd64-2376-4185-9773-f4f6c920446f)
 
+![image](https://github.com/user-attachments/assets/9bfd9253-2585-405e-b07a-deb9a0e654f4)
 
+Now create a new Organizational Unit called "_CLIENTS".
 
+Next xlixk hold and drag client-1 into _CLIENTS. Then click Yes.
 
+![image](https://github.com/user-attachments/assets/e4028b41-618c-49ce-90af-e2d61bed3671)
 
+Now when you click on _clients, you can see client-1 has now moved.
 
+![image](https://github.com/user-attachments/assets/ab6888e3-4e33-4c58-953d-8de39ccfe98c)
 
+Now we need to set up Remote Desktop on client-1 for non0admin users.
 
-
-
-
-
-
-
+In client-1 login as Jane Doe admin account. 
 
 
 
