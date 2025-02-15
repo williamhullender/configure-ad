@@ -377,22 +377,23 @@ Next we can create addittional non-admin users.
 
 In dc-1, ensure youre logged in as Jane Doe admin account, and open Powershell as a administrator.
 
-In the search bar type in powershell, then rightclick powershell ISE and click run as administrator. Then click Yes.
+In the search bar type in PowerShell, then right-click Powershell ISE and click run as administrator. Then click Yes.
 
 ![image](https://github.com/user-attachments/assets/9f8b9330-ce31-46ec-9439-187d6f27f037)
 
 ![image](https://github.com/user-attachments/assets/2d9de501-c126-4c9c-b724-11363d837d50)
 
-Click new script.
+Click New Script.
 
 ![image](https://github.com/user-attachments/assets/1cf781d6-f306-49fa-bc2c-da9dd1d6dfc5)
 
+Then copy the contents that are in this [Script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
 
+Click the copy raw file button.
 
+![image](https://github.com/user-attachments/assets/45e609f7-5416-4ddd-ac5f-da62c0115203)
 
-
-
-
+Then paste the script into the New Script in Powershell ISE on dc-1.
 
 
 
