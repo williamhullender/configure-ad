@@ -297,7 +297,7 @@ Now we can log out of dc-1 and log back in as Jane Doe. Were going to use Jane D
 
 ![image](https://github.com/user-attachments/assets/4fc7fe2d-6ac3-48df-8e31-84d333237e89)
 
-
+Next were going to go back into Client-1 to join it to the domain.
 
 
 
