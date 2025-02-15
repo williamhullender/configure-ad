@@ -237,50 +237,63 @@ Then click next (x4), until you get to Prerequisite check, then click Install.
 
 After this, dc-1 should automatically restart.
 
-Next were going to log back on dc-1, however, the normal logi9n username will not work. You will need to use the new username "mydomain.com\labuser". Ensure you use a backslash or it will not work. The password stays the same. The reason for the username being different is because dc-1 is acting as a domain controller now, to log into it, we must specify which domain we want to log into, and then specify which user is logging in.
+Next were going to log back on dc-1, however, the normal login username will not work. You will need to use the new username "mydomain.com\labuser". Ensure you use a backslash or it will not work. The password stays the same. The reason for the username being different is because dc-1 is acting as a domain controller now, to log into it, we must specify which domain we want to log into, and then specify which user is logging in.
 
+Next were going to create a domain admin user. Click start, then Windows Administrative Tools, then Active Directory Users and Computers.
 
+![image](https://github.com/user-attachments/assets/c627d193-6836-463a-b082-b6f8503bbcaa)
 
+Next were going top create an Organizational Unit for our users and admins to be in. Click the mydomain.com dropdown. Then right click mydomain.com, click new, then click Organizational Unit
 
+![image](https://github.com/user-attachments/assets/bf3679af-9287-4e40-9d2b-ed9d8c874881)
 
+Were going to create two organizational units, the first being "_EMPLOYEES" the second being "_ADMINS". Ensure it is exactly the same as what is in the quotation marks. Then click OK.
 
+![image](https://github.com/user-attachments/assets/c26bc6be-3f8b-4ab1-bad5-9260e40127e8)
 
+![image](https://github.com/user-attachments/assets/c046998b-aafc-4f15-940f-571ebac7c6f1)
 
+Next we can create our Admin User. Click on _ADMINS, then right click _ADMINS, then click New, thenm click User.
 
+![image](https://github.com/user-attachments/assets/827c9d05-3e66-4400-9407-f3c9bc82c596)
 
+Then input the Information. Then click Next.
 
+![image](https://github.com/user-attachments/assets/f209467b-3484-41e8-aaf7-8b64d3a9fb37)
 
+For password you can use "Password1" or another password just ensure to remember it. Then, uncheck "User must chnage password at next login", and check "Password never expires". You never want to do this in real life, this is just to make the lab more simple. Then click Next.
 
+![image](https://github.com/user-attachments/assets/afcc0d2d-d325-424c-b40c-48a133a9cd1b)
 
+Then click Finish.
 
+![image](https://github.com/user-attachments/assets/33259168-43b2-48a8-b079-3459ef2e74b5)
 
+Now we can see our User is created.
 
+![image](https://github.com/user-attachments/assets/107fa050-4aa5-4b16-b696-ee780d1cb6fc)
 
+Next were gonna add Jane Doe to the "Domain Admins" Security Group.
 
+Right click on Jane Doe, then click Properties.
 
+![image](https://github.com/user-attachments/assets/5359da3b-88bc-4656-b7b8-a91f26d9d46c)
 
+Then click Member Of -> Add.
 
+![image](https://github.com/user-attachments/assets/8b76ada8-fff9-4b22-9fe6-c1dc7fbd04e7)
 
+Then in text box input Domain Admins, then click Check Name. Then click OK.
 
+![image](https://github.com/user-attachments/assets/526e05ce-605b-410d-9050-1e705ef786e1)
 
+Now you can see Jane Doe being a member of Domian Admins.
 
+![image](https://github.com/user-attachments/assets/12bf0c9f-9d5c-4fcf-9348-ca68eec0221b)
 
+Click Apply, then OK.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Now we can logout of dc-1 and log back in as Jane Doe. Were going to use Jane Doe account as the admin account from now on.
 
 
 
