@@ -299,25 +299,31 @@ Now we can log out of dc-1 and log back in as Jane Doe. Were going to use Jane D
 
 Next were going to go back into Client-1 to join it to the domain.
 
+In client 1, rightclick the start button, then click System.
 
+![image](https://github.com/user-attachments/assets/cfbd9a84-928f-4039-8f2a-354e9368d9b8)
 
+Then scroll down and click Rename this PC (Advanced).
 
+![image](https://github.com/user-attachments/assets/09f90113-e5a1-4b59-87ff-5abc0e070a18)
 
+Then click Chnage.
 
+![image](https://github.com/user-attachments/assets/d3e38290-c4cd-4d97-9f45-fa323c58e0e7)
 
+Then click Domain under Member Of, then input "mydomain.com". Then click OK.
 
+![image](https://github.com/user-attachments/assets/d4144e06-2bdb-430b-9164-f11d215a7613)
 
+It was able to find mydomain.com because we put client-1's Primary DNS server as our Domain Controller.
 
+Now we can input Jane Doe admin account username and password here to make the chnages.
 
+![image](https://github.com/user-attachments/assets/ec46325d-0a05-4ebc-a09f-f90796608db0)
 
+Then click OK. It will say Welcome to the mydomain.com domain. Click OK. Then client-1 will restart.
 
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/a92afdf7-9745-40a2-993b-377cffa041ed)
 
 
 
