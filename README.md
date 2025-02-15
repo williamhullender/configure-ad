@@ -375,14 +375,17 @@ Now you can login to client-1 as a normal non-admin user.
 
 Next we can create addittional non-admin users.
 
-In dc-1, 
+In dc-1, ensure youre logged in as Jane Doe admin account, and open Powershell as a administrator.
 
+In the search bar type in powershell, then rightclick powershell ISE and click run as administrator. Then click Yes.
 
+![image](https://github.com/user-attachments/assets/9f8b9330-ce31-46ec-9439-187d6f27f037)
 
+![image](https://github.com/user-attachments/assets/2d9de501-c126-4c9c-b724-11363d837d50)
 
+Click new script.
 
-
-
+![image](https://github.com/user-attachments/assets/1cf781d6-f306-49fa-bc2c-da9dd1d6dfc5)
 
 
 
