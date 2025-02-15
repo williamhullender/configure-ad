@@ -349,6 +349,68 @@ Now we need to set up Remote Desktop on client-1 for non0admin users.
 
 In client-1 login as Jane Doe admin account. 
 
+Right click Start and click system to go back into System Properties.
+
+Scroll down and click Remote Desktop.
+
+![image](https://github.com/user-attachments/assets/93f00385-5934-4012-b379-235f21fcfcfd)
+
+Then click Select users thta can remotely access this PC.
+
+![image](https://github.com/user-attachments/assets/5e7c2af9-577b-4ef8-a1db-aff9167dffdd)
+
+Then click Add.
+
+![image](https://github.com/user-attachments/assets/f281197a-9b8d-4b44-99e7-aac979fdfde7)
+
+Then in the text box input "domain users", click check name. Click OK.
+
+![image](https://github.com/user-attachments/assets/ac490d33-33f5-46f7-b8dc-52ed02ce03fb)
+
+You can see that Domain Users was added, click OK.
+
+![image](https://github.com/user-attachments/assets/36bc01eb-8263-4ba6-9be0-dc92b630aae3)
+
+Now you can login to client-1 as a normal non-admin user.
+
+Next we can create addittional non-admin users.
+
+In dc-1, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
