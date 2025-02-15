@@ -317,15 +317,15 @@ Then click Domain under Member Of, then input "mydomain.com". Then click OK.
 
 It was able to find mydomain.com because we put client-1's Primary DNS server as our Domain Controller.
 
-Now we can input Jane Doe admin account username and password here to make the chnages.
+Now we can input Jane Doe's admin account username and password here to make the changes.
 
 ![image](https://github.com/user-attachments/assets/ec46325d-0a05-4ebc-a09f-f90796608db0)
 
-Then click OK. It will say Welcome to the mydomain.com domain. Click OK. Then client-1 will restart.
+Then click OK. It will say Welcome to the mydomain.com domain. Click OK (x2).
 
 ![image](https://github.com/user-attachments/assets/a92afdf7-9745-40a2-993b-377cffa041ed)
 
-
+Then in the Systems Properties click Close, then click Restart Now. This will restart client-1.
 
 
 
