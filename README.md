@@ -466,7 +466,7 @@ Then scroll down and click Rename this PC (Advanced).
 </p>
 <br />
 
-Then click Chnage.
+Then click Change.
 
 </p>
 <br />
@@ -585,7 +585,7 @@ Then click Add.
 </p>
 <br />
 
-Then in the text box input "domain users", click check name. Click OK.
+Then in the text box input "domain users", and click check name. Click OK.
 
 </p>
 <br />
@@ -605,11 +605,11 @@ You can see that Domain Users was added, click OK.
 </p>
 <br />
 
-Now you can login to client-1 as a normal non-admin user.
+Now you can log in to client-1 as a normal non-admin user.
 
-Next we can create addittional non-admin users.
+Nex,t we can create additional non-admin users.
 
-In dc-1, ensure youre logged in as Jane Doe admin account, and open Powershell as a administrator.
+In dc-1, ensure you're logged in as Jane Doe admin account, and open Powershell as an administrator.
 
 In the search bar type in PowerShell, then right-click Powershell ISE and click run as administrator. Then click Yes.
 
@@ -658,7 +658,7 @@ Then paste the script into the New Script in Powershell ISE on dc-1.
 </p>
 <br />
 
-While clicked onto the New Script hit ctrl+s to save it to the desktop.
+Click on the New Script then, hit ctrl+s to save it to the desktop.
 
 </p>
 <br />
@@ -668,7 +668,7 @@ While clicked onto the New Script hit ctrl+s to save it to the desktop.
 </p>
 <br />
 
-Next xlixk run script uing the green play icon.
+Next, click run script using the green play icon.
 
 </p>
 <br />
@@ -680,11 +680,11 @@ Next xlixk run script uing the green play icon.
 
 Now you can see all the users being created.
 
-If you go into Active Directory Users and Computers, and click on _EMPLOYEES, you can see all the users being created.
+If you go into Active Directory Users and Computers and click on _EMPLOYEES, you can see all the users being created.
 
-When looking at the scrtipt we can see thta the password for all these new users is "Password1".
+When looking at the script we can see that the password for all these new users is "Password1".
 
-Now we can try to log in as a random user, pick a random user's username.
+Now we can try to log in as a random user, and pick a random user's username.
 
 </p>
 <br />
@@ -696,11 +696,11 @@ Now we can try to log in as a random user, pick a random user's username.
 
 Then go to client-1 and sign out of jane_admin, and sign in using the new username and password.
 
-You can see that you were able to login now as the new user.
+You can see that you can log in now as the new user.
 
-Finally we can look at Group Policies and Managing Accounts. First we will configure the Group Policy.
+Finally, we can look at Group Policies and Managing Accounts. First, we will configure the Group Policy.
 
-In dc-1, rightclick start and click run. Input "gpmc.msc" and hit Enter.
+In dc-1, right-click start and click run. Input "gpmc.msc" and hit Enter.
 
 </p>
 <br />
@@ -717,7 +717,7 @@ In dc-1, rightclick start and click run. Input "gpmc.msc" and hit Enter.
 
 This will load the Group Policy Management Console.
 
-Next click the dropdown arrow for Forest: mydomain.com -> Domains -> mydomain.com
+Next, click the dropdown arrow for Forest: mydomain.com -> Domains -> mydomain.com
 
 </p>
 <br />
@@ -727,9 +727,9 @@ Next click the dropdown arrow for Forest: mydomain.com -> Domains -> mydomain.co
 </p>
 <br />
 
-Then rightclick Default Domian Policy and click Edit.
+Then right-click Default Domain Policy and click Edit.
 
-Next click the dropdown arrow for Computer Configuration -> Policies -> Window Settings -> Security Settings -> Account Policies, then click on Account Lockout Policy.
+Next, click the dropdown arrow for Computer Configuration -> Policies -> Window Settings -> Security Settings -> Account Policies, then click on Account Lockout Policy.
 
 </p>
 <br />
@@ -741,9 +741,9 @@ Next click the dropdown arrow for Computer Configuration -> Policies -> Window S
 
 Now you can see the settings for Account Lockout Settings.
 
-- Account Lockout Duration is the time in minutes a account remains locked before automatically being unlocked.
+- Account Lockout Duration is the time in minutes an account remains locked before automatically being unlocked.
 - Account Lockout Threshold is the number of failed logon attempts that will trigger an account lockout.
-- Reset Account Lockout Counter After is the time after which the failed logon atempts counter is reset to 0, if there are no additional failed logon attempts.
+- Reset Account Lockout Counter After is the time after which the failed logon attempts counter is reset to 0, if there are no additional failed logon attempts.
 
 Double click Account lockout duration and check the box, then input "30" for 30 minutes. Click Apply -> OK (x2).
 
@@ -775,7 +775,7 @@ Next Double click Allow Administrators account lockout, ensure the box is checke
 </p>
 <br />
 
-Lastly, double click Reset account lockout counter after, and ensure box is checked and it syas 10, then click OK.
+Lastly, double click Reset account lockout counter after, and ensure the box is checked and it says 10, then click OK.
 
 </p>
 <br />
@@ -811,7 +811,7 @@ After 6 failed login attempts, you can see the account has been locked out.
 </p>
 <br />
 
-Now in dc-1, find the random user you used. Double click the account and click Account. Next check the box beside Unlock Account, click Apply -> OK.
+Now in dc-1, find the random user you used. Double-click the account and click Account. Next, check the box beside Unlock Account, click Apply -> OK.
 
 </p>
 <br />
@@ -821,9 +821,9 @@ Now in dc-1, find the random user you used. Double click the account and click A
 </p>
 <br />
 
-Now attempt to login to that account and see that you are able to login to the account now.
+Now attempt to log in to that account and see that you can log in to the account now.
 
-Now you can disable the account by right clicking on the account and click Disable Account.
+Now you can disable the account by right-clicking on the account and clicking Disable Account.
 
 </p>
 <br />
@@ -833,7 +833,7 @@ Now you can disable the account by right clicking on the account and click Disab
 </p>
 <br />
 
-Now logout of client-1 and try to logon to the account again and you can see that you cannot login to the account.
+Now log out of client-1 and try to log on to the account again and you can see that you cannot log in to the account.
 
 </p>
 <br />
@@ -843,6 +843,6 @@ Now logout of client-1 and try to logon to the account again and you can see tha
 </p>
 <br />
 
-Now repeat thge steps to Enable the account and try to login. You can see that you are able to login now.
+Now repeat these steps to Enable the account and try to log in. You can see that you can log in now.
 
-Congratulations! We have setup our Active Directory, created users, and configured Group Policies.
+Congratulations! We have set up our Active Directory, created users, configured Group Policies, and disabled and enabled user accounts.
