@@ -395,16 +395,73 @@ Click the copy raw file button.
 
 Then paste the script into the New Script in Powershell ISE on dc-1.
 
+![image](https://github.com/user-attachments/assets/4a5174e2-133a-40ea-8497-a54c44bef0f0)
 
+While clicked onto the New Script hit ctrl+s to save it to the desktop.
 
+![image](https://github.com/user-attachments/assets/85bf8109-37df-4b38-b274-7ecc2e041265)
 
+Next xlixk run script uing the green play icon.
 
+![image](https://github.com/user-attachments/assets/03651145-4346-421b-bc8e-234bc420dc6d)
 
+Now you can see all the users being created.
 
+If you go into Active Directory Users and Computers, and click on _EMPLOYEES, you can see all the users being created.
 
+When looking at the scrtipt we can see thta the password for all these new users is "Password1".
 
+Now we can try to log in as a random user, pick a random user's username.
 
+![image](https://github.com/user-attachments/assets/d6cef8be-ad4c-4f32-9e78-6ab08c553829)
 
+Then go to client-1 and sign out of jane_admin, and sign in using the new username and password.
+
+You can see that you were able to login now as the new user.
+
+Finally we can look at Group Policies and Managing Accounts. First we will configure the Group Policy.
+
+In dc-1, rightclick start and click run. Input "gpmc.msc" and hit Enter.
+
+![image](https://github.com/user-attachments/assets/f6581254-4782-4e47-acd8-c7a9d8b063a5)
+
+![image](https://github.com/user-attachments/assets/34ac0a76-da7d-4627-8eca-486703bfc08d)
+
+This will load the Group Policy Management Console.
+
+Next click the dropdown arrow for Forest: mydomain.com -> Domains -> mydomain.com
+
+![image](https://github.com/user-attachments/assets/365b609b-428a-409d-ae77-5f026786a367)
+
+Then rightclick Default Domian Policy and click Edit.
+
+Next click the dropdown arrow for Computer Configuration -> Policies -> Window Settings -> Security Settings -> Account Policies, then click on Account Lockout Policy.
+
+![image](https://github.com/user-attachments/assets/23aa4452-895a-4620-83ae-76a72ff16e0d)
+
+Now you can see the settings for Account Lockout Settings.
+
+- Account Lockout Duration is the time in minutes a account remains locked before automatically being unlocked.
+- Account Lockout Threshold is the number of failed logon attempts that will trigger an account lockout.
+- Reset Account Lockout Counter After is the time after which the failed logon atempts counter is reset to 0, if there are no additional failed logon attempts.
+
+Double click Account lockout duration and check the box, then input "30" for 30 minutes. Click Apply -> OK (x2).
+
+![image](https://github.com/user-attachments/assets/72f30b6e-54d2-412a-a84f-084eee93241e)
+
+Now double click Account lockout threshold and ensure it is checked and says 5. Click OK.
+
+![image](https://github.com/user-attachments/assets/90e477cf-8b41-4a5e-adde-b5536a2d60cc)
+
+Next Double click Allow Administrators account lockout, ensure the box is checked and Enabled is picked. Click OK.
+
+![image](https://github.com/user-attachments/assets/903c2d65-6660-4f79-81b6-018d8beeead2)
+
+Lastly, double click Reset account lockout counter after, and ensure box is checked and it syas 10, then click OK.
+
+![image](https://github.com/user-attachments/assets/7cdc5f6d-b2e9-43d6-800e-b70357758ccb)
+
+Now that we configured the GRoup Policy settings we need to login to client-1 as jane_admin to force update client-1.
 
 
 
