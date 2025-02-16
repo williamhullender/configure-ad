@@ -469,12 +469,26 @@ Then type "gpupdate /force" and hit enter.
 
 ![image](https://github.com/user-attachments/assets/e3f33feb-5325-4373-a954-1485143c27bc)
 
-Now that we updated the Group Policy on client-1, we can pick a random non-admin user and fail 5 login attempts with them.
+Now that we updated the Group Policy on client-1, we can pick a random non-admin user and fail 6 login attempts with them.
 
-After 5 failed login attempts, you can see the account has been locked out.
+After 6 failed login attempts, you can see the account has been locked out.
 
 ![image](https://github.com/user-attachments/assets/40682e44-79cb-487a-b113-09937b8db659)
 
+Now in dc-1, find the random user you used. Double click the account and click Account. Next check the box beside Unlock Account, click Apply -> OK.
 
+![image](https://github.com/user-attachments/assets/8adfa544-1770-4061-8b49-ea336cbbdf23)
 
+Now attempt to login to that account and see that you are able to login to the account now.
 
+Now you can disable the account by right clicking on the account and click Disable Account.
+
+![image](https://github.com/user-attachments/assets/a5cbcf12-643c-4345-8939-73966b4fc390)
+
+Now logout of client-1 and try to logon to the account again and you can see that you cannot login to the account.
+
+![image](https://github.com/user-attachments/assets/0c8222b2-7f9d-4341-95a5-036f7e34dc0f)
+
+Now repeat thge steps to Enable the account and try to login. You can see that you are able to login now.
+
+Congratulations! We have setup our Active Directory, created users, and configured Group Policies.
