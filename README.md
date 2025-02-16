@@ -189,27 +189,63 @@ Next, we are going to install Active Directory Domain Services.
 
 Click start and then go to server manager.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/8acaa679-a2b0-4fc4-b1bf-e5a325584896)
+
+</p>
+<br />
 
 Then click, Add Roles and features
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/46eb03fe-1c9b-43a5-8d5d-f1fa4b3fcb8e)
+
+</p>
+<br />
 
 Then click Next -> Next until you get to server selection. Verify there is only one entry and it should say dc-1.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/5419b74c-1988-484d-ab38-112cad668b31)
+
+</p>
+<br />
 
 Then click next to get to Server Roles and check the box beside Active Directory Domain Service.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/e9599b6a-45aa-4cca-a844-416b01a2c986)
+
+</p>
+<br />
 
 Next, click Add Features.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/27e80987-ab45-4f8d-814a-407477b9a55c)
+
+</p>
+<br />
 
 Then click next (x3). Then click the box next to "Restart the following roles, role services, or features on selected server, click Install." Then click yes on the Add Roles and Features Wizard. Afterwards, click Install.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/15487689-95cc-451d-bd0e-771be569727e)
+
+</p>
+<br />
 
 This will start Installing the Active Directory services. When it is done click close.
 
@@ -217,23 +253,53 @@ Next, we must configure dc-1 to become a Domain Controller and create a new fore
 
 In Server Manager, go to the top right corner and click the flag icon. Next, click Promote this server to a domain controller.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/1415a577-09b3-42dc-9fb3-d27cd3a4c9c8)
+
+</p>
+<br />
 
 Next, click Add a new forest. Then input the name "mydomain.com". Afterward, click next.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/a12d09a1-29b6-4b69-97cf-3145a08a010a)
+
+</p>
+<br />
 
 Then for the password, input "Password1", Ensure to write this down or remember it. Then click next.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/e8cb801e-f34f-456f-ac16-bbbeaeedb17a)
+
+</p>
+<br />
 
 Then ensure that DNS delegation is unchecked.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/37c1bc68-db33-4869-af1f-230af59371e5)
+
+</p>
+<br />
 
 Then click next (x4), until you get to Prerequisite check, then click Install.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/71f73684-7514-43e1-9456-c76e3a603443)
+
+</p>
+<br />
 
 After this, dc-1 should automatically restart.
 
@@ -241,89 +307,206 @@ Next were going to log back on dc-1, however, the normal login username will not
 
 Next, we are going to create a domain admin user. Click Start, then Windows Administrative Tools, then Active Directory Users and Computers.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/c627d193-6836-463a-b082-b6f8503bbcaa)
+
+</p>
+<br />
 
 Next, we are going to create an Organizational Unit for our users and admins to be in. Click the mydomain.com dropdown. Then right-click mydomain.com, click new, then click Organizational Unit
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/bf3679af-9287-4e40-9d2b-ed9d8c874881)
+
+</p>
+<br />
 
 Were going to create two organizational units, the first being "_EMPLOYEES" and the second being "_ADMINS". Ensure it is the same as what is in the quotation marks. Then click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/c26bc6be-3f8b-4ab1-bad5-9260e40127e8)
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/c046998b-aafc-4f15-940f-571ebac7c6f1)
 
+</p>
+<br />
+
 Next, we can create our Admin User. Click on _ADMINS, then right-click _ADMINS, then click New, then click User.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/827c9d05-3e66-4400-9407-f3c9bc82c596)
 
+</p>
+<br />
+
 Then input the Information. Then click Next.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/f209467b-3484-41e8-aaf7-8b64d3a9fb37)
 
+</p>
+<br />
+
 For password, you can use "Password1" or another password just ensure to remember it. Then, uncheck "User must change password at next login", and check "Password never expires". You never want to do this in real life, this is just to make the lab more simple. Then click Next.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/afcc0d2d-d325-424c-b40c-48a133a9cd1b)
 
+</p>
+<br />
+
 Then click Finish.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/33259168-43b2-48a8-b079-3459ef2e74b5)
 
+</p>
+<br />
+
 Now we can see our User is created.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/107fa050-4aa5-4b16-b696-ee780d1cb6fc)
+
+</p>
+<br />
 
 Next, we're gonna add Jane Doe to the "Domain Admins" Security Group.
 
 Right-click on Jane Doe, then click Properties.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/5359da3b-88bc-4656-b7b8-a91f26d9d46c)
+
+</p>
+<br />
 
 Then click Member Of -> Add.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/8b76ada8-fff9-4b22-9fe6-c1dc7fbd04e7)
+
+</p>
+<br />
 
 Then in the text box input Domain Admins, and click Check Name. Then click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/526e05ce-605b-410d-9050-1e705ef786e1)
+
+</p>
+<br />
 
 Now you can see Jane Doe is a member of Domain Admins.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/12bf0c9f-9d5c-4fcf-9348-ca68eec0221b)
+
+</p>
+<br />
 
 Click Apply, then OK.
 
 Now we can log out of dc-1 and log back in as Jane Doe. Were going to use Jane Doe account as the admin account from now on. Using Jane Doe login to dc-1.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/4fc7fe2d-6ac3-48df-8e31-84d333237e89)
 
-Next were going to go back into Client-1 to join it to the domain.
+</p>
+<br />
 
-In client 1, rightclick the start button, then click System.
+Next, we are going to go back into Client-1 to join it to the domain.
+
+In client 1, right-click the start button, then click System.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/cfbd9a84-928f-4039-8f2a-354e9368d9b8)
 
+</p>
+<br />
+
 Then scroll down and click Rename this PC (Advanced).
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/09f90113-e5a1-4b59-87ff-5abc0e070a18)
 
+</p>
+<br />
+
 Then click Chnage.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/d3e38290-c4cd-4d97-9f45-fa323c58e0e7)
 
+</p>
+<br />
+
 Then click Domain under Member Of, then input "mydomain.com". Then click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/d4144e06-2bdb-430b-9164-f11d215a7613)
+
+</p>
+<br />
 
 It was able to find mydomain.com because we put client-1's Primary DNS server as our Domain Controller.
 
 Now we can input Jane Doe's admin account username and password here to make the changes.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/ec46325d-0a05-4ebc-a09f-f90796608db0)
+
+</p>
+<br />
 
 Then click OK. It will say Welcome to the mydomain.com domain. Click OK (x2).
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/a92afdf7-9745-40a2-993b-377cffa041ed)
+
+</p>
+<br />
 
 Then in the Systems Properties click Close, then click Restart Now. This will restart client-1.
 
@@ -331,45 +514,96 @@ Next in dc-1, we can check to ensure client-1now shows up in Active Directory Us
 
 In dc-1 go to Active Directory Users and Computers. Then click the mydomain.com dropdown, then click Computers. You can see client-1 now shows up. If you double click client-1 you can see all the information about that computer.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/c0d0bd64-2376-4185-9773-f4f6c920446f)
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/9bfd9253-2585-405e-b07a-deb9a0e654f4)
 
+</p>
+<br />
+
 Now create a new Organizational Unit called "_CLIENTS".
 
-Next xlixk hold and drag client-1 into _CLIENTS. Then click Yes.
+Next, click hold and drag client-1 into _CLIENTS. Then click Yes.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/e4028b41-618c-49ce-90af-e2d61bed3671)
 
+</p>
+<br />
+
 Now when you click on _clients, you can see client-1 has now moved.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/ab6888e3-4e33-4c58-953d-8de39ccfe98c)
 
-Now we need to set up Remote Desktop on client-1 for non0admin users.
+</p>
+<br />
+
+Now we need to set up Remote Desktop on client-1 for non-admin users.
 
 In client-1 login as Jane Doe admin account. 
 
-Right click Start and click system to go back into System Properties.
+Right-click Start and click System to go back into System Properties.
 
 Scroll down and click Remote Desktop.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/93f00385-5934-4012-b379-235f21fcfcfd)
 
-Then click Select users thta can remotely access this PC.
+</p>
+<br />
+
+Then click Select users that can remotely access this PC.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/5e7c2af9-577b-4ef8-a1db-aff9167dffdd)
 
+</p>
+<br />
+
 Then click Add.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/f281197a-9b8d-4b44-99e7-aac979fdfde7)
 
+</p>
+<br />
+
 Then in the text box input "domain users", click check name. Click OK.
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/ac490d33-33f5-46f7-b8dc-52ed02ce03fb)
 
+</p>
+<br />
+
 You can see that Domain Users was added, click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/36bc01eb-8263-4ba6-9be0-dc92b630aae3)
+
+</p>
+<br />
 
 Now you can login to client-1 as a normal non-admin user.
 
@@ -379,31 +613,70 @@ In dc-1, ensure youre logged in as Jane Doe admin account, and open Powershell a
 
 In the search bar type in PowerShell, then right-click Powershell ISE and click run as administrator. Then click Yes.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/9f8b9330-ce31-46ec-9439-187d6f27f037)
+
+</p>
+<br />
 
 ![image](https://github.com/user-attachments/assets/2d9de501-c126-4c9c-b724-11363d837d50)
 
+</p>
+<br />
+
 Click New Script.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/1cf781d6-f306-49fa-bc2c-da9dd1d6dfc5)
+
+</p>
+<br />
 
 Then copy the contents that are in this [Script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
 
 Click the copy raw file button.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/45e609f7-5416-4ddd-ac5f-da62c0115203)
+
+</p>
+<br />
 
 Then paste the script into the New Script in Powershell ISE on dc-1.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/4a5174e2-133a-40ea-8497-a54c44bef0f0)
+
+</p>
+<br />
 
 While clicked onto the New Script hit ctrl+s to save it to the desktop.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/85bf8109-37df-4b38-b274-7ecc2e041265)
+
+</p>
+<br />
 
 Next xlixk run script uing the green play icon.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/03651145-4346-421b-bc8e-234bc420dc6d)
+
+</p>
+<br />
 
 Now you can see all the users being created.
 
@@ -413,7 +686,13 @@ When looking at the scrtipt we can see thta the password for all these new users
 
 Now we can try to log in as a random user, pick a random user's username.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/d6cef8be-ad4c-4f32-9e78-6ab08c553829)
+
+</p>
+<br />
 
 Then go to client-1 and sign out of jane_admin, and sign in using the new username and password.
 
@@ -423,21 +702,42 @@ Finally we can look at Group Policies and Managing Accounts. First we will confi
 
 In dc-1, rightclick start and click run. Input "gpmc.msc" and hit Enter.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/f6581254-4782-4e47-acd8-c7a9d8b063a5)
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/34ac0a76-da7d-4627-8eca-486703bfc08d)
+
+</p>
+<br />
 
 This will load the Group Policy Management Console.
 
 Next click the dropdown arrow for Forest: mydomain.com -> Domains -> mydomain.com
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/365b609b-428a-409d-ae77-5f026786a367)
+
+</p>
+<br />
 
 Then rightclick Default Domian Policy and click Edit.
 
 Next click the dropdown arrow for Computer Configuration -> Policies -> Window Settings -> Security Settings -> Account Policies, then click on Account Lockout Policy.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/23aa4452-895a-4620-83ae-76a72ff16e0d)
+
+</p>
+<br />
 
 Now you can see the settings for Account Lockout Settings.
 
@@ -447,19 +747,43 @@ Now you can see the settings for Account Lockout Settings.
 
 Double click Account lockout duration and check the box, then input "30" for 30 minutes. Click Apply -> OK (x2).
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/72f30b6e-54d2-412a-a84f-084eee93241e)
+
+</p>
+<br />
 
 Now double click Account lockout threshold and ensure it is checked and says 5. Click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/90e477cf-8b41-4a5e-adde-b5536a2d60cc)
+
+</p>
+<br />
 
 Next Double click Allow Administrators account lockout, ensure the box is checked and Enabled is picked. Click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/903c2d65-6660-4f79-81b6-018d8beeead2)
+
+</p>
+<br />
 
 Lastly, double click Reset account lockout counter after, and ensure box is checked and it syas 10, then click OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/7cdc5f6d-b2e9-43d6-800e-b70357758ccb)
+
+</p>
+<br />
 
 Now that we configured the Group Policy settings we need to login to client-1 as jane_admin to force update client-1.
 
@@ -467,27 +791,57 @@ In client-1, once logged in as jane_admin open the command prompt as an administ
 
 Then type "gpupdate /force" and hit enter.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/e3f33feb-5325-4373-a954-1485143c27bc)
+
+</p>
+<br />
 
 Now that we updated the Group Policy on client-1, we can pick a random non-admin user and fail 6 login attempts with them.
 
 After 6 failed login attempts, you can see the account has been locked out.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/40682e44-79cb-487a-b113-09937b8db659)
+
+</p>
+<br />
 
 Now in dc-1, find the random user you used. Double click the account and click Account. Next check the box beside Unlock Account, click Apply -> OK.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/8adfa544-1770-4061-8b49-ea336cbbdf23)
+
+</p>
+<br />
 
 Now attempt to login to that account and see that you are able to login to the account now.
 
 Now you can disable the account by right clicking on the account and click Disable Account.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/a5cbcf12-643c-4345-8939-73966b4fc390)
+
+</p>
+<br />
 
 Now logout of client-1 and try to logon to the account again and you can see that you cannot login to the account.
 
+</p>
+<br />
+
 ![image](https://github.com/user-attachments/assets/0c8222b2-7f9d-4341-95a5-036f7e34dc0f)
+
+</p>
+<br />
 
 Now repeat thge steps to Enable the account and try to login. You can see that you are able to login now.
 
