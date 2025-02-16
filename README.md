@@ -461,17 +461,19 @@ Lastly, double click Reset account lockout counter after, and ensure box is chec
 
 ![image](https://github.com/user-attachments/assets/7cdc5f6d-b2e9-43d6-800e-b70357758ccb)
 
-Now that we configured the GRoup Policy settings we need to login to client-1 as jane_admin to force update client-1.
+Now that we configured the Group Policy settings we need to login to client-1 as jane_admin to force update client-1.
 
+In client-1, once logged in as jane_admin open the command prompt as an administrator by typing in cmd into the search bar and clicking run as administrator under Command Prompt. Click Yes.
 
+Then type "gpupdate /force" and hit enter.
 
+![image](https://github.com/user-attachments/assets/e3f33feb-5325-4373-a954-1485143c27bc)
 
+Now that we updated the Group Policy on client-1, we can pick a random non-admin user and fail 5 login attempts with them.
 
+After 5 failed login attempts, you can see the account has been locked out.
 
-
-
-
-
+![image](https://github.com/user-attachments/assets/40682e44-79cb-487a-b113-09937b8db659)
 
 
 
