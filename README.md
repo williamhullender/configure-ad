@@ -668,7 +668,7 @@ Click on the New Script then, hit ctrl+s to save it to the desktop.
 </p>
 <br />
 
-Next, click run script using the green play icon.
+Next, click Run Script using the green play icon.
 
 </p>
 <br />
@@ -684,7 +684,7 @@ If you go into Active Directory Users and Computers and click on _EMPLOYEES, you
 
 When looking at the script we can see that the password for all these new users is "Password1".
 
-Now we can try to log in as a random user, and pick a random user's username.
+Now we can try to log in as a random user. Pick a random user's username.
 
 </p>
 <br />
@@ -811,7 +811,7 @@ After 6 failed login attempts, you can see the account has been locked out.
 </p>
 <br />
 
-Now in dc-1, find the random user you used. Double-click the account and click Account. Next, check the box beside Unlock Account, click Apply -> OK.
+Now in dc-1, find the random user you used. Double-click the account and click Account. Next, check the box beside Unlock Account, and click Apply -> OK.
 
 </p>
 <br />
